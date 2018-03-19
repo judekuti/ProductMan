@@ -1,5 +1,24 @@
 <div *ngIf="product">
     <h3>
-    Selected Product: {{ product.name }}
+    {{ product.category}}
 </h3>
+<div>
+    ID:
+    <strong>
+        {{ product.id }}
+    </strong>
+</div>
+<div>
+    Name:
+    <strong>
+        {{ product.name }}
+    </strong>
+</div>
+<div>
+    Price:
+    <strong>
+        {{ product.price }}
+    </strong>
+</div>
+
 </div>
