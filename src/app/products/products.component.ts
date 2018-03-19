@@ -7,7 +7,12 @@ import { Product } from '../product'
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-    product: Product
+    product: Product = {
+        id: 1,
+        name:"Tripod Stand",
+        price: 200,
+        category: "Support Aparatus"
+    }
 
   constructor() { }
 
