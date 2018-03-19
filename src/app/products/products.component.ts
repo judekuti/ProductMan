@@ -34,7 +34,7 @@ onSelectedProduct(product) {
 
   }
   ngOnInit() {
-      this.selectedProduct = this.products[0]
+      // this.selectedProduct = this.products[0]
   }
 
 }
