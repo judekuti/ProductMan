@@ -1,1 +1,8 @@
-<h1>Products Page</h1>
+<div>
+    <div>
+    Name: {{ product.name | uppercase}}
+    </div>
+    <div>
+    Price: {{ product.price | currency: "USD":true}}
+    </div>
+</div>
