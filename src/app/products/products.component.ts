@@ -26,10 +26,15 @@ export class ProductsComponent implements OnInit {
         category: "Measuring Aparatus"
     }]
 
-  constructor() { }
+selectedProduct: Product;
+constructor() { }
 
+onSelectedProduct(product) {
+      this.selectedProduct = product;
+
+  }
   ngOnInit() {
-      console.log("Hey what's up")
+      this.selectedProduct = this.products[0]
   }
 
 }
