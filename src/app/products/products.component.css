@@ -1,0 +1,7 @@
+.product.selected{
+color: red;
+}
+
+.product{
+    cursor: pointer;
+}
