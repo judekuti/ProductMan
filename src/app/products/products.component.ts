@@ -20,8 +20,8 @@ onSelectedProduct(product) {
       // this.selectedProduct = this.products[0]
   }
   getProducts():void{
-     const products = this.productService.getProducts();
-     this.products = products;
+     const products = this.productService.getProducts().subscribe(products=> this.products = products)
+     // this.products = products;
   }
 
 }
