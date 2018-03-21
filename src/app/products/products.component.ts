@@ -22,7 +22,7 @@ import {
       animate(100)
     ]),
     transition('* => void', [
-      animate(100, style({transform: 'translateX(100%)'}))
+      animate(1000, style({opacity: 0}))
     ])
   ])
 ]
