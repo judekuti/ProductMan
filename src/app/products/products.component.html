@@ -8,7 +8,8 @@
     <li
     class="product"
     [class.selected]="selectedProduct && selectedProduct.name === product.name"
-    *ngFor= "let product of products">
+    *ngFor= "let product of products"
+    [@flyInOut]>
         <input [(ngModel)]="product.name" />
         <div (click)="onSelectedProduct(product)">Name: {{ product.name | uppercase}}</div>
         <div>Price: {{ product.price | currency: "USD":"true"}}</div>
