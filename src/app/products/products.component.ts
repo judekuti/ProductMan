@@ -29,4 +29,9 @@ onSelectedProduct(product) {
       this.productService.updateProduct(product).subscribe(()=> console.log('Product Saved'));
   }
 
+  addProduct(name: string, price: number): void{
+      console.log(name, price)
+
+  }
+
 }

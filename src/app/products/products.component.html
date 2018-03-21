@@ -1,3 +1,9 @@
+<div>
+    <input #nameInput placeholder="Name">
+    <input #priceInput placeholder="Price">
+    <button (click) = "addProduct(nameInput.value, priceInput.value); nameInput.value = ''; priceInput.value=''">Add Product</button>
+</div>
+
 <ul>
     <li
     class="product"
@@ -5,7 +11,7 @@
     *ngFor= "let product of products">
         <input [(ngModel)]="product.name" />
         <div (click)="onSelectedProduct(product)">Name: {{ product.name | uppercase}}</div>
-        <div>Price: {{ product.price | currency: "USD":true}}</div>
+        <div>Price: {{ product.price | currency: "USD":"true"}}</div>
         <button (click)="saveProduct(product)">Save</button>
     </li>
 </ul>
