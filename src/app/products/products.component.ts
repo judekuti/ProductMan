@@ -25,4 +25,8 @@ onSelectedProduct(product) {
      // this.products = products;
   }
 
+  saveProduct(product):void{
+      this.productService.updateProduct(product)
+  }
+
 }
