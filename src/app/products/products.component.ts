@@ -26,7 +26,7 @@ onSelectedProduct(product) {
   }
 
   saveProduct(product):void{
-      this.productService.updateProduct(product)
+      this.productService.updateProduct(product).subscribe(()=> console.log('Product Saved'));
   }
 
 }
