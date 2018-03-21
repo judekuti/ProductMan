@@ -36,6 +36,7 @@ onSelectedProduct(product) {
 
   }
 
+// Subscribe makes the delete function occur
   delete(productId: number): void {
       this.products = this.products.filter(product => product.id !== productId);
 
