@@ -54,6 +54,13 @@ export class ProductService {
         return this.http.post<Product>(this.productsUrl, product, httpOptions).pipe(tap((product: Product)=> console.log(`Added Product with id ${product.id}!`)),
             catchError(this.handleError<Product>('addProduct')))
     }
+
+    deleteProduct(productId: number): Observable<Product>{
+        const url = `${this.productsUrl}/${productId}`;
+
+        return this.http.delete<Product>(url,httpOptions).pipe(tap(_=> console.log(`Deleted Product with id ${productId}!`)),
+            catchError(this.handleError<Product>('deleteProduct')))
+    }
 }
 
 
