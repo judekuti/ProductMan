@@ -5,25 +5,6 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { catchError, map, tap } from 'rxjs/operators';
 
-const products = [{
-        id: 1,
-        name:"Tripod Stand",
-        price: 200,
-        category: "Support Aparatus"
-    },
-    {
-        id: 2,
-        name: "Testtube Rack",
-        price: 40,
-        category: "Support Aparatus"
-    },
-    {
-        id: 3,
-        name: "Conical Flask",
-        price: 50,
-        category: "Measuring Aparatus"
-    }]
-
 
 @Injectable()
 export class ProductService {
@@ -56,3 +37,12 @@ export class ProductService {
         catchError(this.handleError<Product>(`getProduct id=${id}`)));
 
 }
+
+    updateProduct(product: Product): Observable<any> {
+        return this.http.put(this.productsUrl, product, httpOptions).pipe(tap(product => console.log(`Update Product of id ${product.id}!`)),
+            catchError(this.handleError<any>('updateProduct')))
+
+    }
+}
+
+
