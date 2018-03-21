@@ -13,6 +13,7 @@ constructor(private productService: ProductService) { }
 
 onSelectedProduct(product) {
       this.selectedProduct = product;
+      this.productService.getProduct(2).subscribe(product=> console.log(product));
 
   }
   ngOnInit() {
