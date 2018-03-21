@@ -44,7 +44,7 @@ export class ProductService {
 
 }
 
-    updateProduct(product: Product): Observable<Product> {
+   updateProduct(product: Product): Observable<Product> {
         return this.http.put(this.productsUrl, product, httpOptions).pipe(tap(_ => console.log(`Update Product of id ${product.id}!`)),
             catchError(this.handleError<any>('updateProduct')))
 
